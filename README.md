@@ -1,4 +1,4 @@
-# ProDex -- Smart Product Aggregator
+# ProDex - Smart Product Aggregator
 
 ProDex is a web application that helps users search for products from
 multiple e-commerce platforms in one place.\
