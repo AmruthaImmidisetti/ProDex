@@ -1,11 +1,25 @@
-# ProDex - Smart Product Aggregator
+# ProDex - Multi-Platform Product Search with Virtual Try-On
 
-ProDex is a web application that helps users search for products from
-multiple e-commerce platforms in one place.\
-Users can search using **text, voice, or images**, making product
-discovery faster and easier.
+## Overview
 
-------------------------------------------------------------------------
+ProDex is a smart product aggregation platform that enables users to
+search products from multiple e-commerce websites through a single
+interface. Users can search using **Text, Voice, or Image**, compare
+products, apply filters, and preview clothing using an AI-powered
+**Virtual Try-On** feature before making a purchase decision.
+
+## Problem Statement
+
+Online shopping often requires users to search across multiple e-commerce websites, making product comparison time-consuming and inefficient. In addition, users cannot easily visualize how a clothing item will look on them before making a purchase, leading to uncertainty in buying decisions. ProDex addresses these challenges by providing a unified multi-platform product search with text, voice, and image search, AI-powered Virtual Try-On, filtering, sorting, wishlist, and chatbot support.
+
+## Technologies
+
+-   Frontend: HTML, CSS, JavaScript
+-   Backend: Flask (Python)
+-   Cloud: Google Cloud Storage, Cloud Run
+-   APIs: SerpApi, Google Lens Engine, Virtual Try-On API
+-   AI: Google Vertex AI
+-   Voice: WebKit Speech Recognition
 
 ## Features
 
@@ -29,18 +43,6 @@ discovery faster and easier.
 -   **Chatbot Support**
     -   A simple chatbot helps users with product search and queries.
 
-------------------------------------------------------------------------
-
-## Tech Stack
-
-**Frontend** - HTML - Tailwind CSS - JavaScript
-
-**Backend** - Python - Flask
-
-**APIs & Cloud Services** - SERP API (Product search) - Google Cloud
-Storage (Image storage) - Google Vertex AI (Virtual try-on)
-
-------------------------------------------------------------------------
 
 ## Project Workflow
 
@@ -75,4 +77,67 @@ If the user wants to see how an apparel item looks on them, they can select the 
 - The system processes the user's image and the selected product image.
 - Using **Google Vertex AI**, a new image is generated showing the user wearing the selected dress.
 
-------------------------------------------------------------------------
+
+## Working
+
+### Text Search
+
+User → Flask → SerpApi → Multiple E-commerce Platforms → Results
+
+### Voice Search
+
+User Speech → WebKit Speech Recognition → Text → Flask → SerpApi →
+Results
+
+### Image Search
+
+1.  User uploads image.
+2.  Image stored in Google Cloud Storage.
+3.  SerpApi (Google Lens) analyzes the image.
+4.  Search query generated.
+5.  Query cleaned.
+6.  Cleaned query searches multiple e-commerce platforms.
+7.  Results displayed.
+
+### Virtual Try-On
+
+1.  User selects a product.
+2.  User uploads an image.
+3.  Image stored in Google Cloud Storage.
+4.  Upload triggers Cloud Run.
+5.  Cloud Run extracts the selected product image.
+6.  Both images are sent to the Virtual Try-On API.
+7.  Generated image is saved in the user's session folder.
+8.  Result displayed.
+9.  Session folder is automatically deleted when the user closes the
+    generated image.
+
+## Privacy & Security
+
+-   Unique session folder for every user.
+-   Temporary image storage only.
+-   Automatic deletion after use.
+-   User data remains isolated.
+
+## My Role
+
+-   Developed the multimodal search pipeline.
+-   Implemented voice and image search.
+-   Integrated Google Cloud Storage.
+-   Integrated Virtual Try-On workflow.
+-   Worked with Cloud Run and APIs.
+-   Performed query processing and debugging.
+
+## Future Enhancements
+
+-   Affiliate Marketing
+-   Personalized recommendations
+-   More shopping platforms
+-   Price alerts
+-   User accounts
+
+## Conclusion
+
+ProDex provides a unified, AI-powered shopping experience by combining
+multimodal search, cloud services, and Virtual Try-On to help users
+discover products faster and make better purchase decisions.
