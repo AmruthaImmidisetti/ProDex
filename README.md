@@ -77,6 +77,7 @@ If the user wants to see how an apparel item looks on them, they can select the 
 - The system processes the user's image and the selected product image.
 - Using **Google Vertex AI**, a new image is generated showing the user wearing the selected dress.
 
+![ProDex System Architecture](Images/prodex-architecture.png)
 
 ## Working
 
