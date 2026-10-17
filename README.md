@@ -12,6 +12,8 @@ products, apply filters, and preview clothing using an AI-powered
 
 Online shopping often requires users to search across multiple e-commerce websites, making product comparison time-consuming and inefficient. In addition, users cannot easily visualize how a clothing item will look on them before making a purchase, leading to uncertainty in buying decisions. ProDex addresses these challenges by providing a unified multi-platform product search with text, voice, and image search, AI-powered Virtual Try-On, filtering, sorting, wishlist, and chatbot support.
 
+![ProDex Feature Overview](Images/prodex-feature-overview.png)
+
 ## Technologies
 
 -   Frontend: HTML, CSS, JavaScript
