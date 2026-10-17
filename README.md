@@ -113,6 +113,8 @@ Results
 9.  Session folder is automatically deleted when the user closes the
     generated image.
 
+![ProDex Working Mechanism](Images/Working%20Mechanism.png)
+
 ## Privacy & Security
 
 -   Unique session folder for every user.
